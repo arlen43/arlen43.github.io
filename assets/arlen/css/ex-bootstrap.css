@@ -1,0 +1,8 @@
+@charset "utf-8";
+header {background: green; color: #fff;}
+nav a {color: #fff; font-size: 12pt;}
+nav a span {margin-right: 8px;}
+
+#top-tip {height: 30px; line-height: 30px; background: #e3e3e3;}
+#signature {float: left; font-size: 27pt; font-family:"Algerian"}
+#header-nav {float: right}

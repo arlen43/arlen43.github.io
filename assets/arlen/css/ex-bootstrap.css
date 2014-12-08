@@ -1,8 +1,26 @@
 @charset "utf-8";
-header {background: green; color: #fff;}
-nav a {color: #fff; font-size: 12pt;}
-nav a span {margin-right: 8px;}
+body {background: url(../img/bg2.jpg) #f6f2f6; font-family: "微软雅黑"}
+header {background: rgba(0,128,0,0.8)!important; color: #fff; }
+nav a {color: #fff; font-size: 11pt;}
+nav a span {margin-right: 8px; font-size: 9pt;}
 
-#top-tip {height: 30px; line-height: 30px; background: #e3e3e3;}
+#top-tip {height: 20px; line-height: 20px; font-size: 10pt;}
 #signature {float: left; font-size: 27pt; font-family:"Algerian"}
 #header-nav {float: right}
+
+.clear {clear: both;}
+.doc-section {background: white; color: #444;}
+.doc-title {font-family: "微软雅黑";}
+.doc-title h1 {padding: 15px;}
+.doc-time {position: relative; margin-left: -12px; padding-left: 12px; background: rgb(0,140,0); float: left; width: 90px; height: 24px; line-height: 24px; color: white;}
+.doc-time::before {position: absolute; top: 0px; left: 100%; content: ""; border: 12px solid rgb(0,140,0);}
+.doc-time::before {border-right-color: transparent;}
+.doc-time::after {position: absolute; top: 100%; left: 0px; content: ""; border-right: 12px solid rgb(0,100,0); border-bottom: 5px solid transparent;}
+.doc-tags {font-size: 12pt; float: right; margin: 0px 25px 0px 5px;}
+.doc-tags span {font-size: 10pt; color: rgb(0,140,0);}
+
+.doc-excerpt {margin-top: 15px; padding: 15px;}
+
+
+.footer {margin-top: 20px; border-top: 2px solid green; height: 40px;}
+

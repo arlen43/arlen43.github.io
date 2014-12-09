@@ -5,7 +5,7 @@ nav a {color: #fff; font-size: 11pt;}
 nav a span {margin-right: 8px; font-size: 9pt;}
 
 #top-tip {height: 30px; line-height: 20px; font-size: 10pt;}
-#signature {float: left; margin-top: 2px; background: url(../img/signiture.png) 0 0 no-repeat; width: 198px; height: 96px;	}
+#signature {float: left; margin-top: 40px; font-size: 27pt; font-family:"Algerian"}
 #top-lion {float: right; margin-bottom: -10px; margin-top: -40px; background: url(../img/lion.png) 0 0 no-repeat; width: 200px; height: 148px;}
 #header-nav {float: right; margin-top: 50px;}
 /*

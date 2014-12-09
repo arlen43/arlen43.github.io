@@ -4,8 +4,10 @@ header {background: rgba(0,128,0,0.8)!important; color: #fff; }
 nav a {color: #fff; font-size: 11pt;}
 nav a span {margin-right: 8px; font-size: 9pt;}
 
-#top-tip {height: 30px; line-height: 20px; font-size: 10pt;}
-#signature {float: left; margin-top: 40px; font-size: 27pt; font-family:"Algerian"}
+#top-tip {height: 30px; line-height: 30px; font-size: 10pt;}
+
+#signature {float: left; margin-top: 10px; font-size: 37pt; font-family:"Algerian"}
+#signature span {font-size: 47pt;}
 #top-lion {float: right; margin-bottom: -10px; margin-top: -40px; background: url(../img/lion.png) 0 0 no-repeat; width: 200px; height: 148px;}
 #header-nav {float: right; margin-top: 50px;}
 /*

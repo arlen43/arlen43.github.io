@@ -1,5 +1,5 @@
 @charset "utf-8";
-body {background: url(../img/bg2.jpg) #f6f2f6; font-family: "微软雅黑"}
+body {background: /*url(../img/bg2.jpg)*/ #f2f2f6; font-family: "微软雅黑"}
 header {background: rgba(0,128,0,0.8)!important; color: #fff; }
 nav a {color: #fff; font-size: 11pt;}
 nav a span {margin-right: 8px; font-size: 9pt;}
@@ -16,11 +16,13 @@ nav a span {margin-right: 8px; font-size: 9pt;}
 .doc-time::before {position: absolute; top: 0px; left: 100%; content: ""; border: 12px solid rgb(0,140,0);}
 .doc-time::before {border-right-color: transparent;}
 .doc-time::after {position: absolute; top: 100%; left: 0px; content: ""; border-right: 12px solid rgb(0,100,0); border-bottom: 5px solid transparent;}
-.doc-tags {font-size: 12pt; float: right; margin: 0px 25px 0px 5px;}
+.doc-tags {font-size: 12pt; float: right; margin: 0px 20px 0px 5px; border-bottom: 2px solid green;}
 .doc-tags span {font-size: 10pt; color: rgb(0,140,0);}
-
+.doc-tags a {}
 .doc-excerpt {margin-top: 15px; padding: 15px;}
 
+.side-section {text-align: right;}
+.side-section ul {list-style: none;}
 
-.footer {margin-top: 20px; border-top: 2px solid green; height: 40px;}
+.footer {margin-top: 40px; border-top: 4px solid green; height: 40px;}
 

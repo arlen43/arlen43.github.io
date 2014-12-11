@@ -10,4 +10,20 @@ title: index page
   {% endfor %}
 </ul>
 
+{% for post in site.posts %}
+<div class="doc-section">
+  <div class="doc-title">
+	<h1>{{ post.title }}</h1>
+	<div class="doc-extra">
+	  <div class="doc-time">2014/12/08</div>
+	  <div class="doc-tags"><span class="glyphicon glyphicon-tags"></span> <a>spring</a> <a>spring</a></div>
+	  <div class="clear"></div>
+	</div>
+  </div>
+  <div class="doc-excerpt">
+	<p></p>
+  </div>
+</div>
+{% endfor %}
+
 Hello World

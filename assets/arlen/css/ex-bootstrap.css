@@ -1,37 +1,45 @@
 @charset "utf-8";
 body {background: /*url(../img/bg2.jpg)*/ #f6f2f6; font-family: "微软雅黑"}
+a {text-decoration: none; color: green; cursor: pointer;}
+a:hover, a:focus {color: green; text-decoration: underline;}
 header {background: rgba(0,128,0,0.8)!important; color: #fff; }
-nav a {color: #fff; font-size: 11pt;}
-nav a span {margin-right: 8px; font-size: 9pt;}
+
+.nav>li>a {color: #fff; font-size: 11pt; transition: background 1s; -moz-transition: background 1s; -webkit-transition: background 1s; -o-transition: background 1s;}
+.nav>li>a>span {margin-right: 8px; font-size: 9pt;}
+.nav>li>a:hover, .nav>li>a:focus/*, .nav>.active>a*/ {background-color: #f6f2f6; color: green;}
 
 #top-tip {height: 30px; line-height: 30px; font-size: 10pt;}
 
-#signature {float: left; margin-top: 10px; font-size: 37pt; font-family:"Algerian"}
-#signature span {font-size: 47pt;}
-#top-lion {float: right; margin-bottom: -10px; margin-top: -40px; background: url(../img/lion.png) 0 0 no-repeat; width: 200px; height: 148px;}
+#signature {float: left; margin-top: 10px; margin-bottom: -10px; font-size: 30pt; font-family:"Algerian";}
+#signature span {font-size: 50pt;}
+/*#top-lion {float: right; margin-bottom: -10px; margin-top: -40px; background: url(../img/lion.png) 0 0 no-repeat; width: 200px; height: 148px;}*/
 #header-nav {float: right; margin-top: 50px;}
 /*
 #signature {float: left; font-size: 27pt; font-family:"Algerian"}
-#top-lion {float: right; margin-bottom: -10px; margin-top: -40px; background: url(../img/lion.png) 0 0 no-repeat; width: 200px; height: 148px;}
 #header-nav {float: right;}*/
 
 .clear {clear: both;}
 .doc-section {background: white; color: #444;}
 .doc-title {font-family: "微软雅黑"; /*color: rgb(155, 102, 62);*/}
 .doc-title h1 {padding: 15px;}
+.doc-title h1 a , .side-section a {text-decoration: none; color: #444; transition: padding 0.5s; -moz-transition: padding 0.5s; -webkit-transition: padding 0.5s; -o-transition: padding 0.5s;}
+.doc-title h1 a:hover, .side-section a:hover {color: green; padding-left: 10px; padding-right: 5px;}
 .doc-time {position: relative; margin-left: -12px; padding-left: 12px; background: rgb(0,140,0); float: left; width: 90px; height: 24px; line-height: 24px; color: white;}
 .doc-time::before {position: absolute; top: 0px; left: 100%; content: ""; border: 12px solid rgb(0,140,0);}
 .doc-time::before {border-right-color: transparent;}
 .doc-time::after {position: absolute; top: 100%; left: 0px; content: ""; border-right: 12px solid rgb(0,100,0); border-bottom: 5px solid transparent;}
-.doc-tags {font-size: 12pt; float: right; margin: 0px 20px 0px 5px; border-bottom: 2px solid green;}
+.doc-tags {font-size: 12pt; float: right; margin: 0px 20px 0px 5px;}
 .doc-tags span {font-size: 10pt; color: rgb(0,140,0);}
-.doc-tags a {}
 .doc-excerpt {margin-top: 15px; padding: 15px;}
 
-.side-section {text-align: right;}
-.side-section ul {list-style: none;}
+.pager .disabled>a, .pager .disabled>a:hover, .pager .disabled>a:focus, .pager .disabled>span {border-color: #777; color: #777; cursor: not-allowed; background-color: #fff;}
+.pager li>a {border: 1px solid green;transition: background 0.5s; -moz-transition: background 0.5s; -webkit-transition: background 0.5s; -o-transition: background 0.5s;}
+.pager li>a:hover, .pager li>a:focus {text-decoration: none; background-color: green; color: white;}
+
+.side-section {text-align: right; padding-right: 15px;}
+.side-section h3 {}
+.side-section ul {list-style: none; font-size: 12pt; line-height: 25px;}
 
 .footer {margin-top: 20px; border-top: 2px solid green; height: 60px; padding: 15px;}
-.footer .container {position: relative; }
-#lion {position: absolute; right: 15px; bottom: 40px; background: url(../img/lion1.jpg) 0 0 no-repeat; width: 200px; height: 168px;}
-
+.footer .container {position: relative;}
+#lion {position: absolute; right: 10px; bottom: 40px; background: url(../img/lion1.jpg) 0 0 no-repeat; width: 200px; height: 168px;}

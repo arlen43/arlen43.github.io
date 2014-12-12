@@ -25,8 +25,7 @@ header {background: rgba(0,128,0,0.8)!important; color: #fff; }
 .doc-title h1 a , .side-section a {text-decoration: none; color: #444; transition: padding 0.5s; -moz-transition: padding 0.5s; -webkit-transition: padding 0.5s; -o-transition: padding 0.5s;}
 .doc-title h1 a:hover, .side-section a:hover {color: green; padding-left: 10px; padding-right: 5px;}
 .doc-time {position: relative; margin-left: -12px; padding-left: 12px; background: rgb(0,140,0); float: left; width: 90px; height: 24px; line-height: 24px; color: white;}
-.doc-time::before {position: absolute; top: 0px; left: 100%; content: ""; border: 12px solid rgb(0,140,0);}
-.doc-time::before {border-right-color: transparent;}
+.doc-time::before {position: absolute; top: 0px; left: 100%; content: ""; border: 12px solid rgb(0,140,0); border-right-color: transparent;}
 .doc-time::after {position: absolute; top: 100%; left: 0px; content: ""; border-right: 12px solid rgb(0,100,0); border-bottom: 5px solid transparent;}
 .doc-tags {font-size: 12pt; float: right; margin: 0px 20px 0px 5px;}
 .doc-tags span {font-size: 10pt; color: rgb(0,140,0);}
@@ -37,8 +36,11 @@ header {background: rgba(0,128,0,0.8)!important; color: #fff; }
 .pager li>a:hover, .pager li>a:focus {text-decoration: none; background-color: green; color: white;}
 
 .side-section {text-align: right; padding-right: 15px;}
-.side-section h3 {}
+.side-section h3 {position: relative; background: white; border-right: 4px solid green; height: 30px; line-height: 30px; padding-right: 5px; /*padding: 5px 5px 5px 0px;*/}
+.side-section h3::before {position: absolute; top: 0px; right: 100%; content: ""; border:15px solid transparent;}
+.side-section h3::before {border-right-color: white;}
 .side-section ul {list-style: none; font-size: 12pt; line-height: 25px;}
+.side-section ul li a span {color: green; font-size: 10pt;}
 
 .footer {margin-top: 20px; border-top: 2px solid green; height: 60px; padding: 15px;}
 .footer .container {position: relative;}

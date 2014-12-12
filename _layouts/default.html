@@ -5,19 +5,37 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="
+	{% if page.description %}
+		{{ page.description }}
+	{% else %}
+		{{ site.description }}
+	{% endif %}
+  ">
+  <meta name="keywords" content="
+	{% if page.keywords %}
+		{{ page.keywords }}
+	{% else %}
+		{{ site.keywords }}
+	{% endif %}
+  ">
   <meta name="author" content="Arlen.Ren">
   
-  <title>My Blog</title>
+  <title>
+	{% if page.title %}
+		{{ page.title }}
+	{% else %}
+		{{ site.title }}
+	{% endif %}
+  </title>
   
-  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <!-- Bootstrap core CSS -->
-  <link href="../assets/bootstrap-3.3.0-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/bootstrap-3.3.0-dist/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- my style -->
-  <link href="../assets/arlen/css/ex-bootstrap.css" rel="stylesheet">
+  <link href="/assets/arlen/css/ex-bootstrap.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -32,25 +50,11 @@
 		<span class="glyphicon glyphicon-bell"></span> Stupid is as stupid dose!
 	</div>
   </div>-->
-  <header>
-    <div class="container">
-	  <div id="signature"><span style="">A</span>rlen</div>
-	  <div id="top-lion"></div>
-	  <nav id="header-nav">
-	    <ul class="nav navbar-nav">
-		  <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-		  <li><a href="#"><span class="glyphicon glyphicon-th-list"></span>Categories</a></li>
-		  <li><a href="#"><span class="glyphicon glyphicon-tags"></span>Tags</a></li>
-		  <li><a href="#"><span class="glyphicon glyphicon-book"></span>About</a></li>
-		  <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>Contact</a></li>
-		</ul>
-	  </nav>
-	</div>
-  </header>
+  {% include header.html %}
   <div class="container">
 	<div class="row">
 	  <div class="col-md-9">
-	  
+		{% for post in site.posts %}
 		<div class="doc-section">
 		  <div class="doc-title">
 			<h1><a href="">Spring3.x 权威指南</a></h1>
@@ -69,6 +73,7 @@
 			<div class="clear"></div>
 		  </div>
 		</div>
+		{% endfor %}
 		
 		<nav>
 		  <ul class="pager">
@@ -104,15 +109,10 @@
 	</div>
   </div>
   
-  <div class="footer">
-	<div class="container text-center">
-	  <!--<div id="lion"></div>-->
-	  &copy; 2014 arlen | powered by <a href="#">jekyll</a> | <a href="http://glyphicons.com/">Glyphicons</a> | <a href="">Bootstrap</a>
-	</div>
-  </div>
+  {% include footer.html %}
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="../assets/bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
+  <script src="/assets/bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,2 +1,7 @@
 highlighter: pygments
 github: [Repository metadata]
+
+title: Arlen.Ren's Blog
+keywords: Arlen 任亚荣 Java
+description: sss
+navigations: [{ls: ddd, dd: 222}, {ls: sss, dd: 333}]

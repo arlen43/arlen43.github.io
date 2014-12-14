@@ -1,6 +1,6 @@
 ---
 layout: default
-title: my first blog
+title: catogeries
 excerpt: You have a dream too? we realize her together!
 ---
 ![my photo]({{site.url}}/assets/small.jpg)

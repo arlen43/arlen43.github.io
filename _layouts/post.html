@@ -1,78 +1,28 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <!-- Meta, title, CSS, favicons, etc. -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="Arlen.Ren">
-  
-  <title>My Blog</title>
-  
-  <link rel="icon" href="../assets/favicon.ico">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <!-- Bootstrap core CSS -->
-  <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- my style -->
-  <link href="../assets/arlen/css/ex-bootstrap.css" rel="stylesheet">
-
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-  <!--<div id="top-tip">
-    <div class="container">
-		<span class="glyphicon glyphicon-bell"></span> Stupid is as stupid dose!
-	</div>
-  </div>-->
-  <header>
-    <div class="container">
-	  <div id="signature"><span style="">A</span>rlen</div>
-	  <div id="top-lion"></div>
-	  <nav id="header-nav">
-	    <ul class="nav navbar-nav">
-		  <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-		  <li><a href="#"><span class="glyphicon glyphicon-th-list"></span>Categories</a></li>
-		  <li><a href="#"><span class="glyphicon glyphicon-tags"></span>Tags</a></li>
-		  <li><a href="#"><span class="glyphicon glyphicon-book"></span>About</a></li>
-		  <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>Contact</a></li>
-		</ul>
-	  </nav>
-	</div>
-  </header>
-  <div class="container">
+---
+layout: default
+---
+<div class="container">
 	<div class="row">
 	  <div class="col-md-12">
 	  
 		<div class="doc-section">
 		  <div class="doc-title">
-			<h1><a href="">Spring3.x 权威指南</a></h1>
-			<div class="doc-extra">
+			<h1>{% if page.title != nil %}{{ page.title }}{%else%}咦，这家伙忘写标题了，快联系他吧{%endif%}</h1>
+			<div class="doc-base-info">
 			  <div class="doc-time">2014/12/08</div>
 			  <div class="doc-tags"><span class="glyphicon glyphicon-tags"></span> <a>spring</a> <a>spring</a></div>
 			  <div class="clear"></div>
 			</div>
 		  </div>
 		  <div class="doc-excerpt">
-			<p>我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文我是正文</p>
+			<p>{{ content }}</p>
+		  </div>
+		  <div class="doc-extra">
+			<div class=""><a>评论(23)</a> 阅读(450)</div>
+			<div class="clear"></div>
 		  </div>
 		</div>
+		
 	  </div>
-	  <!-- end col-md-9 -->
 	</div>
   </div>
-  
-  <div class="footer">
-	<div class="container text-center">
-	  <!--<div id="lion"></div>-->
-	  &copy; 2014 arlen | powered by <a href="#">jekyll</a> | <a href="http://glyphicons.com/">Glyphicons</a> | <a href="">Bootstrap</a>
-	</div>
-  </div>
-</body>
-</html>

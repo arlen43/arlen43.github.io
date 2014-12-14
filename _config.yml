@@ -1,5 +1,7 @@
 highlighter: pygments
 github: [Repository metadata]
+paginate: 5
+paginate_path: "/blog/page:num"
 
 author: arlen
 title: Arlen.Ren's Blog

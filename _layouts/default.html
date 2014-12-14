@@ -2,32 +2,14 @@
 <html lang="zh-CN">
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="
-	{% if page.description %}
-		{{ page.description }}
-	{% else %}
-		{{ site.description }}
-	{% endif %}
-  ">
-  <meta name="keywords" content="
-	{% if page.keywords %}
-		{{ page.keywords }}
-	{% else %}
-		{{ site.keywords }}
-	{% endif %}
-  ">
-  <meta name="author" content="Arlen.Ren">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}" />
+  <meta name="author" content="Arlen.Ren" />
   
-  <title>
-	{% if page.title %}
-		{{ page.title }}
-	{% else %}
-		{{ site.title }}
-	{% endif %}
-  </title>
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -51,7 +33,7 @@
 	</div>
   </div>-->
   {% include header.html %}
-  
+  {{ content }}
   {% include footer.html %}
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>

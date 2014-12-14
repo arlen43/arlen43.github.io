@@ -3,7 +3,7 @@ body {background: #f6f2f6; font-family: "微软雅黑"}
 ul {padding: 0px;}
 a {text-decoration: none; color: green; cursor: pointer;}
 a:hover, a:focus {color: green; text-decoration: underline;}
-header {background: rgba(0,128,0,0.8)!important; color: #fff; }
+header {background: green; color: #fff; }
 
 .nav>li>a {color: #fff; font-size: 11pt; transition: background 1s; -moz-transition: background 1s; -webkit-transition: background 1s; -o-transition: background 1s;}
 .nav>li>a>span {margin-right: 8px; font-size: 9pt;}
@@ -44,7 +44,7 @@ header {background: rgba(0,128,0,0.8)!important; color: #fff; }
 .side-section h3::before {position: absolute; top: 0px; right: 100%; content: ""; border:15px solid transparent;}
 .side-section h3::before {border-right-color: white;}
 .side-section ul {list-style: none; font-size: 12pt; line-height: 25px;}
-.side-section ul li span {color: green; font-size: 8pt;}
+.side-section ul li span {color: green; font-size: 10pt;}
 
 .footer {margin-top: 20px; border-top: 2px solid green; height: 60px; padding: 15px;}
 .footer .container {position: relative;}

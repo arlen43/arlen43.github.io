@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: catogeries
 excerpt: You have a dream too? we realize her together!
 ---

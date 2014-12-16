@@ -31,6 +31,8 @@ header {background: green; color: #fff; }
 .doc-tags {font-size: 12pt; float: right; margin: 0px 20px 0px 5px;}
 .doc-tags span {font-size: 10pt; color: rgb(0,140,0);}
 .doc-excerpt {margin-top: 15px; padding: 15px;}
+.doc-content {margin-top: 15px; padding: 15px; border-bottom: 2px solid green;}
+.doc-copyright {padding: 10px; border: 1px dotted green; background: #E2F7E2;-webkit-border-radius : .5em; -moz-border-radius: .5em; border-radius: .5em;}
 .doc-extra {padding: 0px 15px 5px 15px;}
 .doc-link {float: left;}
 .doc-count {float: right;}

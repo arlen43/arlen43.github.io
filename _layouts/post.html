@@ -14,14 +14,34 @@ layout: default
 			  <div class="clear"></div>
 			</div>
 		  </div>
-		  <div class="doc-excerpt">
+		  <div class="doc-content">
 			<p>{{ content }}</p>
+			<div class="doc-copyright">
+				作者：{% if site.author != nil %}{{ site.author }}{%else%}arlen{%endif%} <br />
+				出处：{{ site.base_url }}{{ page.url }} <br />
+				本文版权归原作者所有，欢迎转载，但未经同意请保留这段声明，且在文章明显的位置给出原文链接。 <br />
+			</div>
 		  </div>
 		  <div class="doc-extra">
-			<div class=""><a>评论(23)</a> 阅读(450)</div>
 			
+			<nav>
+			  <ul class="pager">
+				<li class="previous {% if page.previous == nil %} disabled {% endif %}">
+				  <a href="{% if page.previous == nil %}{{'javascript:void(0);'}}{% else %}{{ page.previous.url }}{%endif%}">
+					<span class="glyphicon glyphicon-circle-arrow-left"></span> {% if page.previous == nil %}{{'呀，没有上一篇啦！'}}{% else %}{{ page.previous.title }}{%endif%}
+				  </a>
+				</li>
+				<li class="next {% if page.next == nil %} disabled {% endif %}">
+				  <a href="{% if page.next == nil %}{{'javascript:void(0);'}}{% else %}{{ page.next.url }}{%endif%}">
+					{% if page.next == nil %}{{'呀，没有上一篇啦！'}}{% else %}{{ page.next.title }}{%endif%} <span class="glyphicon glyphicon-circle-arrow-right"></span>
+				  </a>
+				</li>
+			  </ul>
+			</nav>
+			
+			<div class=""><a>评论(23)</a> 阅读(450)</div>
 			<!-- 多说评论框 start -->
-			<div class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
+			<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ site.base_url }}{{ page.url }}"></div>
 			<!-- 多说评论框 end -->
 			<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 			<script type="text/javascript">
@@ -31,19 +51,16 @@ layout: default
 					ds.type = 'text/javascript';ds.async = true;
 					ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
 					ds.charset = 'UTF-8';
-					(document.getElementsByTagName('head')[0] 
-					 || document.getElementsByTagName('body')[0]).appendChild(ds);
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 				})();
 			</script>
 			<!-- 多说公共JS代码 end -->
-		  
 			<div class="clear"></div>
 		  </div>
+		  <!-- end of doc-extra -->
 		</div>
-		
-		
-		
+		<!-- end of doc-section -->
 	  </div>
-	  
+	  <!-- end of col-md-12 -->
 	</div>
   </div>

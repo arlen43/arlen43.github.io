@@ -1,0 +1,39 @@
+---
+layout: page
+title: blog archives
+---
+{% for post in site.posts%}
+	{% capture postDate %}{{ post.date | date: "%Y-%m-%d" }}{% endcapture %}
+	{% capture postMonthDis %}{{ post.date | date: "%B" }}{% endcapture %}
+	{% capture postYear %}{{ post.date | date: "%Y" }}{% endcapture %}
+	{% capture nextPostYear %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+	{% capture prePostYear %}{{ post.next.date | date: "%Y" }}{% endcapture %}
+	{% capture postMonth %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+	{% capture nextPostMonth %}{{ post.previous.date | date: "%Y-%m" }}{% endcapture %}
+	{% capture prePostMonth %}{{ post.next.date | date: "%Y-%m" }}{% endcapture %}
+	{% if postYear != prePostYear %}
+	<div class="doc-section">
+	  <h1 id="{{ postYear }}">{{ postYear }}</h1>
+	{% endif %}
+	{% if postMonth != prePostMonth %}
+	  <h2 id="{{ postMonth }}">{{ postMonthDis }}</h2>
+	  <ul id="doc-list">
+	{% endif %}
+		<li><span>{{ postDate }}</span> &rarr; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% if postMonth != nextPostMonth %}
+	  </ul>
+	{% endif %}
+	{% if postYear != nextPostYear %}
+	</div>
+	{% endif %}
+{% endfor %}
+
+{% comment %}
+{% for post in site.posts%}
+	--------- now {{ post.date | date: "%Y-%m-%d" }} 
+	--------- next {{ post.next.date | date: "%Y-%m-%d" }} 
+	--------- previous {{ post.previous.date | date: "%Y-%m-%d" }} 
+	--------- {{ post.title }}<br>
+{% endfor %}
+{% endcomment %}
+		

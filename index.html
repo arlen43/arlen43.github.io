@@ -11,7 +11,7 @@ title: Arlen's Blog
 		  <div class="doc-time">{{ post.date | date: "%Y-%m-%d" }}</div>
 		  <div class="doc-tags"><span class="glyphicon glyphicon-tags"></span> 
 			{% for tag in post.tags %}
-			  <a href="/tags#{{ tag }}">{{ tag }}</a>
+			  <a href="/tags.html#{{ tag }}">{{ tag }}</a>
 			{% endfor %}
 		  </div>
 		  <div class="clear"></div>
@@ -27,3 +27,15 @@ title: Arlen's Blog
 	  </div>
 	</div>
 {% endfor %}
+
+<nav>
+  <ul class="pager">
+	<li class="previous {% if paginator.previous_page_path == nil %} disabled {% endif %}">
+	  <a href="{% if paginator.previous_page_path == nil %}{{'javascript:void(0);'}}{% else %}{{ paginator.previous_page_path }}{%endif%}">上一页</a>
+	</li>
+	<li>{{ paginator.page }}/{{ paginator.total_pages }}</li>
+	<li class="next {% if paginator.next_page_path == nil %} disabled {% endif %}">
+	  <a href="{% if paginator.next_page_path == nil %}{{'javascript:void(0);'}}{% else %}{{ paginator.next_page_path }}{%endif%}">下一页</a>
+	</li>
+  </ul>
+</nav>

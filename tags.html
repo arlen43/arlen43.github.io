@@ -1,0 +1,22 @@
+---
+layout: page
+title: blog tags
+---
+<div class="doc-section">
+  <div class="tag">
+	{% for tag in site.tags%}
+	<a href="#{{ tag[0] }}">{{ tag[0] }}<sup>{{ tag[1] | size }}</sup></a>
+	{% endfor %}
+  </div>
+</div>
+
+{% for tag in site.tags%}
+<div class="doc-section">
+  <h1 id="{{ tag[0] }}">{{ tag[0] }}</h1>
+  <ul id="doc-list">
+  {% for post in tag[1]%}
+	<li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &rarr; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
+{% endfor %}

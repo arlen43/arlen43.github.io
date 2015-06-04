@@ -10,7 +10,12 @@ layout: default
 			<h1>{% if page.title != nil %}{{ page.title }}{%else%}咦，这家伙忘写标题了，快联系他吧{%endif%}</h1>
 			<div class="doc-base-info">
 			  <div class="doc-time">2014/12/08</div>
-			  <div class="doc-tags"><span class="glyphicon glyphicon-tags"></span> <a>spring</a> <a>spring</a></div>
+			  <div class="doc-tags">
+				<span class="glyphicon glyphicon-tags"></span> 
+				{% for tag in page.tags %}
+				  <a href="/tags.html#{{ tag }}">{{ tag }}</a>
+				{% endfor %}
+			  </div>
 			  <div class="clear"></div>
 			</div>
 		  </div>

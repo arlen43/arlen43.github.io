@@ -22,9 +22,13 @@ layout: default
 		  <div class="doc-content">
 			<p>{{ content }}</p>
 			<div class="doc-copyright">
-				作者：{% if site.author != nil %}{{ site.author }}{%else%}arlen{%endif%} <br />
-				出处：{{ site.base_url }}{{ page.url }} <br />
-				本文版权归原作者所有，欢迎转载，但未经同意请保留这段声明，且在文章明显的位置给出原文链接。 <br />
+                {% if page.source != nil and page.source == 'virgin' %}
+                    作者：{% if site.author != nil %}{{ site.author }}{%else%}arlen{%endif%} <br />
+                    出处：{{ site.base_url }}{{ page.url }} <br />
+                    本文版权归原作者所有，欢迎转载，但未经同意请保留这段声明，且在文章明显的位置给出原文链接。 <br />
+                {%else%}
+                    本文转自：{{page.source_url}}
+                {%endif%}
 			</div>
 		  </div>
 		  <div class="doc-extra">

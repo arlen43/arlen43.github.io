@@ -6,6 +6,6 @@ paginate_path: "/blog/page:num"
 
 author: Arlen.Ren
 title: Arlen.Ren's Blog
-keywords: Arlen 任亚荣 Java
-description: sss
+keywords: Arlen 任亚荣 Java Spring
+description: 任亚荣的技术博客
 navigations: [{ls: ddd, dd: 222}, {ls: sss, dd: 333}]

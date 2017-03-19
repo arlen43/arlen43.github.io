@@ -55,3 +55,11 @@ header {background: green; color: #fff; }
 .footer {margin-top: 20px; border-top: 2px solid green; height: 60px; padding: 15px;}
 .footer .container {position: relative;}
 #lion {position: absolute; right: 10px; bottom: 40px; background: url(../img/lion1.jpg) 0 0 no-repeat; width: 200px; height: 168px;}
+
+/** markdown css */
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 0 45px;
+}

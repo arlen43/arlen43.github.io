@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ActiveMQ安装与验证
+title: Mybatis generator 开发自己的插件
 tags: ActiveMQ
 source: virgin
 ---

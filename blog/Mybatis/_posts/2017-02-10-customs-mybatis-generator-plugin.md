@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mybatis generator 开发自己的插件
-tags: ActiveMQ
+tags: Mybatis,Plugin
 source: virgin
 ---
     Mybatis generator着实减少了平时开发中的很多工作量，但是每次生成的东西必须的修修改改才可以用，何不让其生成的东西一次性就可以使用呢？

@@ -1,5 +1,6 @@
 encoding: utf-8
-highlighter: pygments
+#3.0之后默认用rouge
+#highlighter: pygments
 github: [Repository metadata]
 base_url: http://arlen43.github.io
 paginate: 5

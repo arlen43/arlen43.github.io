@@ -3,7 +3,7 @@ layout: page
 title: blog tags
 ---
 <div class="doc-section">
-  <div class="tag">
+  <div class="doc-tag">
 	{% for tag in site.tags%}
 	<a href="#{{ tag[0] }}">{{ tag[0] }}<sup>{{ tag[1] | size }}</sup></a>
 	{% endfor %}

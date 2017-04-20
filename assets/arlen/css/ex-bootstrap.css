@@ -63,3 +63,8 @@ header {background: green; color: #fff; }
     margin: 0 auto;
     padding: 10px 45px;
 }
+
+/** you yan css */
+uyan_frame body {
+    font-family: "微软雅黑";
+}

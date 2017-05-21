@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mybatis generator 开发自己的插件
-tags: Mybatis,Plugin
+tags: Mybatis Plugin
 source: virgin
 ---
     Mybatis generator着实减少了平时开发中的很多工作量，但是每次生成的东西必须的修修改改才可以用，何不让其生成的东西一次性就可以使用呢？
@@ -250,7 +250,10 @@ mvn install:install-file -Dfile=target/mybatis-generator-plugin.jar -DgroupId=co
 ### 七、运行mybatis-generator-maven-plugin生成代码
 右击自己的项目-->Run as-->Run configurations...-->选择自己的项目-->Goals填mybatis-generator:generate-->运行
 
+![Example相关类图]({{site.url}}/assets/img-blog/Mybatis/eclipse-run-generator.png)
+
 然后代码就生成了。
+
 或者直接用maven直接打包自己的maven项目。
 
 ### 八、让别的小伙伴一起来用你的插件吧——上传jar包到maven私服
